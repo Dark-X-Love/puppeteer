@@ -1,6 +1,7 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 puppeteer.use(StealthPlugin());
 
