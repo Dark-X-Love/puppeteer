@@ -1,11 +1,22 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
+require("dotenv").config();
 
 puppeteer.use(StealthPlugin());
 
 const openPage = async () => {
   const browser = await puppeteer.launch({
-    slowMo: 10
+    args: [
+      "--disable-setuid-sandbox",
+      "--no-sandbox",
+      "--single-process",
+      "--no-zygote",
+    ],
+    executablePath:
+      process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
+    slowMo: 10,
   });
   const page = await browser.newPage();
 
