@@ -1,5 +1,5 @@
 import express from "express";
-import { openPage } from "../scraper/scraper.js";
+import { openPage } from "../scraper/scraper.mjs";
 
 const app = express();
 

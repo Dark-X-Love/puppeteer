@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index",
-    "start": "node src/index"
+    "start": "node src/index.mjs"
   },
   "keywords": [],
   "author": "",
