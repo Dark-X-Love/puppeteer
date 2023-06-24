@@ -1,5 +1,5 @@
-import express from "express";
-import { openPage } from "../scraper/scraper.js";
+const express = "express";
+const { openPage } = "../scraper/scraper.js";
 
 const app = express();
 
